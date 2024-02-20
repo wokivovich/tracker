@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.anikulin</groupId>
-	<artifactId>we</artifactId>
+	<artifactId>tracker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>we</name>
 	<description>Work experience</description>

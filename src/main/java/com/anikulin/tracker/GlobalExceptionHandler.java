@@ -1,6 +1,6 @@
-package com.anikulin.we;
+package com.anikulin.tracker;
 
-import com.anikulin.we.exception.ValidationException;
+import com.anikulin.tracker.exception.ValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;

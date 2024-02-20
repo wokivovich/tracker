@@ -1,4 +1,4 @@
-package com.anikulin.we.dto;
+package com.anikulin.tracker.dto;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.anikulin.we.exception;
+package com.anikulin.tracker.exception;
 
 
 public class ValidationException extends IllegalArgumentException {

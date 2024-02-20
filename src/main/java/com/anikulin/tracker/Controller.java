@@ -1,9 +1,9 @@
-package com.anikulin.we;
+package com.anikulin.tracker;
 
-import com.anikulin.we.domain.Employee;
-import com.anikulin.we.dto.EmployeesRequest;
-import com.anikulin.we.dto.WorkTimeResponse;
-import com.anikulin.we.service.EmployeeService;
+import com.anikulin.tracker.domain.Employee;
+import com.anikulin.tracker.dto.EmployeesRequest;
+import com.anikulin.tracker.dto.WorkTimeResponse;
+import com.anikulin.tracker.service.EmployeeService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

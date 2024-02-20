@@ -1,8 +1,8 @@
-package com.anikulin.we;
+package com.anikulin.tracker;
 
-import com.anikulin.we.domain.Employee;
-import com.anikulin.we.dto.WorkTimeResponse;
-import com.anikulin.we.service.EmployeeService;
+import com.anikulin.tracker.domain.Employee;
+import com.anikulin.tracker.dto.WorkTimeResponse;
+import com.anikulin.tracker.service.EmployeeService;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.BeforeAll;

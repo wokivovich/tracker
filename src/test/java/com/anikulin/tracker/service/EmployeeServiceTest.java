@@ -1,8 +1,8 @@
-package com.anikulin.we.service;
+package com.anikulin.tracker.service;
 
-import com.anikulin.we.domain.Employee;
-import com.anikulin.we.dto.WorkTimeResponse;
-import com.anikulin.we.exception.ValidationException;
+import com.anikulin.tracker.domain.Employee;
+import com.anikulin.tracker.dto.WorkTimeResponse;
+import com.anikulin.tracker.exception.ValidationException;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.anikulin.we.domain;
+package com.anikulin.tracker.domain;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;

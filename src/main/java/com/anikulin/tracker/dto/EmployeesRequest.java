@@ -1,6 +1,6 @@
-package com.anikulin.we.dto;
+package com.anikulin.tracker.dto;
 
-import com.anikulin.we.domain.Employee;
+import com.anikulin.tracker.domain.Employee;
 import jakarta.validation.Valid;
 import lombok.Data;
 

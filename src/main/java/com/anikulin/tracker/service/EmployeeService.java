@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.time.LocalTime;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -52,20 +51,24 @@ public class EmployeeService {
     }
 
     private Map<Long, LocalTime>  mergeResponseByLocalTime(Map<Long, List<WorkTimeResponse>> workExperienceResponses) {
-        Map<Long, LocalTime> responses = new HashMap<>();
-
-        for (Map.Entry<Long, List<WorkTimeResponse>> item : workExperienceResponses.entrySet()) {
-            LocalTime sumWorkTime = LocalTime.of(0, 0, 0);
-
-            for (WorkTimeResponse response : item.getValue()) {
-                LocalTime tmp = response.getTime();
-                sumWorkTime = sumWorkTime.plusHours(tmp.getHour()).plusMinutes(tmp.getMinute()).plusSeconds(tmp.getSecond());
-            }
-
-            responses.put(item.getKey(), sumWorkTime);
-        }
+        Map<Long, LocalTime> responses = workExperienceResponses.entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        response -> response.getKey(),
+                        response -> response.getValue()
+                                .stream()
+                                .map(WorkTimeResponse::getTime).reduce((baseTime, addedTime) ->
+                                        sumTime(baseTime, addedTime))
+                                .get()));
 
         return responses;
+    }
+
+    private LocalTime sumTime(LocalTime baseTime, LocalTime addedTime) {
+        return baseTime
+                .plusHours(addedTime.getHour())
+                .plusMinutes(addedTime.getMinute())
+                .plusSeconds(addedTime.getSecond());
     }
 
 }

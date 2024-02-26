@@ -4,9 +4,11 @@ import com.anikulin.tracker.domain.Employee;
 import jakarta.validation.Valid;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class EmployeesRequest {
 
     @Valid
-    private Employee[] employees;
+    private List<Employee> employees;
 }
